@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(220 20% 7%);
+  --color-foreground: hsl(220 15% 88%);
+  --color-card: hsl(220 18% 10%);
+  --color-card-foreground: hsl(220 15% 88%);
+  --color-primary: hsl(250 60% 62%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(220 16% 13%);
+  --color-secondary-foreground: hsl(220 10% 65%);
+  --color-muted: hsl(220 16% 13%);
+  --color-muted-foreground: hsl(220 10% 45%);
+  --color-accent: hsl(250 50% 58%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-destructive: hsl(0 65% 48%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(220 14% 14%);
+  --color-input: hsl(220 14% 14%);
+  --color-ring: hsl(250 60% 62%);
+  --color-success: hsl(160 60% 45%);
+  --color-success-foreground: hsl(0 0% 100%);
+  --color-mint: hsl(160 60% 55%);
+  --color-heading: hsl(220 15% 92%);
+  --color-dim: hsl(220 10% 35%);
+  --color-sidebar: hsl(220 22% 6%);
+  --color-sidebar-bg: hsl(220 22% 6%);
+  --color-sidebar-foreground: hsl(220 10% 55%);
+  --color-sidebar-accent: hsl(220 18% 10%);
+  --color-sidebar-border: hsl(220 14% 11%);
+  --color-chart-1: hsl(250 60% 62%);
+  --color-chart-2: hsl(280 50% 55%);
+  --color-chart-3: hsl(200 55% 50%);
+  --color-chart-4: hsl(160 60% 45%);
+  --color-chart-5: hsl(320 50% 55%);
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+}
+
+* {
+  border-color: hsl(220 14% 14%);
+}
+
+body {
+  color: hsl(220 15% 88%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0b0f14;
+  min-height: 100vh;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-family: 'Space Mono', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 14% 14%);
+  border-radius: 2px;
+}
+
+.card-eclipse {
+  border-radius: 1rem;
+  border: 1px solid hsl(220 14% 14%);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-eclipse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, hsl(250 60% 62% / 0.04), transparent 60%);
+  pointer-events: none;
+}
+
+.glow-primary {
+  box-shadow: 0 0 20px hsl(250 60% 62% / 0.15), 0 0 40px hsl(250 60% 62% / 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, hsl(250 60% 62%), hsl(280 50% 55%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary,
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(250 60% 62%), hsl(280 70% 55%));
+}
+
+.stat-card {
+  border-radius: 1rem;
+  border: 1px solid hsl(220 14% 14%);
+  background: hsl(220 18% 10%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, hsl(250 60% 62% / 0.5), transparent);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.625rem;
+  font-size: 0.8125rem;
+  color: hsl(220 10% 55%);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  background: hsl(220 18% 10%);
+  color: hsl(220 15% 88%);
+}
+
+.sidebar-link.active {
+  background: hsl(250 60% 62% / 0.12);
+  color: hsl(250 60% 72%);
+}
