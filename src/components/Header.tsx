@@ -230,6 +230,7 @@ export default function Header({ onOpenNotificationCenter }: HeaderProps) {
             type="button"
             aria-label="Toggle notifications"
             aria-expanded={openNotifications}
+            title="notifications"
             onClick={() => setOpenNotifications((current) => !current)}
             className="relative p-2 rounded-lg hover:bg-secondary transition-colors"
           >
@@ -323,6 +324,7 @@ export default function Header({ onOpenNotificationCenter }: HeaderProps) {
                   className="min-w-0 flex-1 bg-transparent text-sm text-heading placeholder:text-muted-foreground focus:outline-none"
                 />
                 <button
+                  title='search'
                   type="button"
                   onClick={() => setOpenMobileSearch(false)}
                   className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-heading"
